@@ -1,12 +1,13 @@
-// Calculator.spec.js
-import { mount } from '@vue/test-utils';
-import Calculatora from '../views/Calculadora.vue'; // Ajusta la ruta a la de tu componente
 
-describe('Calculator.vue', () => {
+import { mount } from '@vue/test-utils';
+import Calculadora from '../views/Calculadora.vue'; // Ajusta la ruta si es necesario
+
+
+describe('Calculadora.vue', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = mount(Calculatora)
+    wrapper = mount(Calculadora)
   })
 
   it('debería renderizar todos los botones correctamente', () => {
@@ -60,6 +61,6 @@ describe('Calculator.vue', () => {
   it('debería reiniciar la pantalla al presionar "C"', async () => {
     await wrapper.find('button:nth-child(9)').trigger('click') // Presiona "1"
     await wrapper.find('button:nth-child(17)').trigger('click') // Presiona "C"
-    expect(wrapper.find('input').element.value).toBe('0')
+    expect(wrapper.find('input').element.value).toBe(0)
   })
 })

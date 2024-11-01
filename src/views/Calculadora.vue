@@ -21,7 +21,7 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
   
   const display = ref('0')
   const currentOperation = ref(null)
